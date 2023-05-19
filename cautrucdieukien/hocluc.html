@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span>Điểm bài kiểm tra hệ số 1:<input type="number" id="scores1"></span>
+    <span>Điểm bài thi giữa kì:<input type="number" id="scores2"></span>
+    <span>Xếp loại học lực: <input type="text" id="classifiles"></span>
+    <button id="total" onclick="mouseover()">total</button>
+    <script>
+        function mouseover(){
+            let scores1 = parseFloat(document.getElementById('scores1').value);
+            let scores2 = parseFloat(document.getElementById('scores2').value);
+            
+            var total = (scores1 + 2* scores2 ) / 3
+            switch(true){
+                case total>= 9.5 && total <=10 :
+                document.getElementById('classifiles').value= ('Học lực Xuất Sắc');
+                break;
+                case total>= 8   :
+                document.getElementById('classifiles').value= ('Học lực Giỏi');
+                break;
+                case total>= 6.5   :
+                document.getElementById('classifiles').value= ('Học lực Khá');
+                break;
+                case total>= 5   :
+                document.getElementById('classifiles').value= ('Học lực Trung Bình');
+                break;
+                case total>= 3.5   :
+                document.getElementById('classifiles').value= ('Học lực Yếu');
+                break;
+                case  total < 3.5 :
+                document.getElementById('classifiles').value= ('Học lực Kém');
+                break;
+                default  :
+                document.getElementById('classifiles').value= ('Nhập lại điểm');
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

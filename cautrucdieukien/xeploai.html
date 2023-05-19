@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="0" cellspacing="0" >
+        <tbody>
+            <tr>
+                <th></th>
+                <th>Điểm học kì 1</th>
+                <th>Điểm học kì 2</th>
+            </tr>
+            <tr>
+                <th>Điểm hệ số 1</th>
+                <th><input type="number" class="scores1" value="1"></th>
+                <th><input type="number" class="scores2" value="2"></th>
+            </tr>
+            <tr>
+                <th> Điểm hệ số 2</th>
+                <th><input type="number" class="scores3" value="3"></th>
+                <th><input type="number" class="scores4" value="4"></th>
+            </tr>
+            <tr>
+                <th> Điểm hệ số 3</th>
+                <th><input type="number" class="scores5" value="5"></th>
+                <th><input type="number" class="scores6" value="6"></th>
+            </tr>
+            
+            <tr>
+                <th></th>
+                <th><button  onclick="mouseEvent1()" >Tổng điểm học kì 1</button></th>
+                <th><button  onclick="mouseEvent2()">Tổng điểm học kì 2</button></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th><input type="number" class="scores7" value="7"></th>
+                <th><input type="number" class="scores8"value="8" ></th>
+            </tr>
+            <tr>
+                <th></th>
+                <th colspan="2"><button   onclick="mouseEvent3()">Tổng điểm cả năm</button></th>
+            </tr>
+            <tr>
+                <th>Tổng điểm cả năm:</th>
+                <th colspan="2"><input type="number" class="scores9" value="9"></th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function mouseEvent1(){
+            let scores1 = +document.getElementsByClassName('scores1');
+            let scores2 = +document.getElementsByClassName('scores2');
+            let scores3 = +document.getElementsByClassName('scores3');
+            let total1 = (scores1 + scores2*2 +scores3*3)/6
+            document.getElementsByClassName('scores7') = total1;
+        }
+        function mouseEvent2(){
+            let scores4 = +document.getElementsByClassName('scores4');
+            let scores5 = +document.getElementsByClassName('scores5');
+            let scores6 = +document.getElementsByClassName('scores6');
+            let total2 = (scores1 + scores2*2 +scores3*3)/6
+            document.getElementsByClassName('scores8') = total2;
+        }
+    </script>
+</body>
+</html>
