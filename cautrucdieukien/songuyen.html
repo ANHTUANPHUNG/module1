@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" class="ITG">
+    <input type="number" class="ITG1">
+    <input type="number" class="ITG2">
+    <button id="Check" onclick="mouseEvent()">Check</button>
+    <script>
+        function mouseEvent(){
+        let a = parseFloat( document.getElementById('ITG').value);
+        let b = parseFloat( document.getElementById('ITG1').value);
+        let c = parseFloat( document.getElementById('ITG1').value);
+        if (Number.isInteger(a)){
+            if (a > 0){
+                document.write('số nguyên lớn hơn 0');
+            } else if (a < 0){
+                document.write('số nguyên bé hơn 0');
+            } else document.write('0');
+        } else {document.write('số không phải số nguyên')};
+        if (Number.isInteger(b)){
+            if (b > 0){
+                document.write('số nguyên lớn hơn 0');
+            } else if (b < 0){
+                document.write('số nguyên bé hơn 0');
+            } else document.write('0');
+        } else {document.write('số không phải số nguyên')};
+        if (Number.isInteger(a)){
+            if (c > 0){
+                document.write('số nguyên lớn hơn 0');
+            } else if (c < 0){
+                document.write('số nguyên bé hơn 0');
+            } else document.write('0');
+        } else {document.write('số không phải số nguyên')};
+    }
+    </script>
+</body>
+</html>
