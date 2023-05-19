@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tbody>
+            <tr>
+                <th>Gía bán lẻ điện sinh hoạt</th>
+                <th><input type="number" id="KWH"></th>
+            </tr>
+            <tr>
+                <th>Gía bán điện</th>
+                <th><input type="text" id="dong"></th>
+            </tr>
+            <tr> 
+                <th><button class="result" onclick="mouseEvent()">result</button></th>
+                <th><button class="count" onclick="count()">count</button></th>
+                <th><button class="price" onclick="price()">price</button></th>
+            </tr>
+            <tr>
+                <th><input type="text" id="bill"></th>
+                <th>
+                    <button id="tong" onclick="mouseover1()">tong</button>
+                </th>
+            </tr>
+            
+        </tbody>
+       
+    </table>
+    <script>
+        function mouseEvent(){
+            let KWH = parseInt(document.getElementById('KWH').value);
+            if (KWH > 401 ){   
+                document.getElementById('dong').value= 3.015 ;
+            }
+            if (300 < KWH && KWH <400 ){   
+                document.getElementById('dong').value= 2.919 ;
+            }
+            if (200 < KWH && KWH <= 300 ){   
+                document.getElementById('dong').value= 2.612 ;
+            }
+            if (100 < KWH && KWH <= 200 ){   
+                document.getElementById('dong').value= 2.074 ;
+            }
+            if (50 < KWH && KWH <= 100){   
+                document.getElementById('dong').value= 1.786 ;
+            }
+            if (KWH <= 50 ){   
+                document.getElementById('dong').value= 1.728 ;
+            }
+        }   
+        function count(){
+            console.log("hhhh");
+            let KWH = parseInt(document.getElementById('KWH').value);
+            if (KWH > 400){
+                document.getElementById('dong').value= 3.015 ;
+            } else if ( KWH > 300 ){ 
+                document.getElementById('dong').value= 2.919 ;   
+            } else if ( KWH > 200 ){ 
+                document.getElementById('dong').value= 2.612 ;   
+            } else if ( KWH > 100 ){   
+                document.getElementById('dong').value= 2.074 ;
+            } else if (KWH > 50 ){   
+                document.getElementById('dong').value= 1.786 ;
+            } else {
+                document.getElementById('dong').value= 1.728  ;
+            }
+        }
+        function price(){
+            let KWH = parseInt(document.getElementById('KWH').value);
+            switch (true){
+                case KWH > 401 : 
+                document.getElementById('dong').value= 3.015 ;
+                break;
+                case KWH <= 50 :
+                    document.getElementById('dong').value= 1.728 ;
+                break;
+                case  KWH < 100 :
+                    document.getElementById('dong').value= 1.786;
+                break;
+                case  KWH < 200 :
+                    document.getElementById('dong').value= 2.074 ;
+                break;
+                case KWH < 300 :
+                    document.getElementById('dong').value= 2.612 ;
+                break;
+                case KWH < 400 :
+                    document.getElementById('dong').value= 2.919;
+                break;       
+            }       
+        }
+        function mouseover1(){
+            let KWH = +document.getElementById('KWH').value;
+            let dong = +document.getElementById('dong').value;
+            var tong=0;
+            if ( KWH <= 50){
+                tong = (KWH * dong)*10
+                document.getElementById('bill').value = tong;
+            } else if (KWH <=100){
+                tong = (( 50 * 1.728 )+ ( KWH - 50 )* dong) * 10
+                document.getElementById('bill').value = tong;
+            } else if (KWH <= 200){
+                tong = ((50*1.728)+(50*1.786)+(KWH - 100)* dong) * 10
+                document.getElementById('bill').value = tong;
+            } else if (KWH <= 300){
+                tong = ((50*1.728)+(50*1.786)+(100*2.074)+(KWH-200)*dong) *104
+                document.getElementById('bill').value = tong;
+            } else if( KWH <= 400){
+                tong = ((50*1.728)+(50*1.786)+(100*2.074)+(100*2.612)+(KWH-300)*dong)* 10
+                document.getElementById('bill').value = tong;
+            } else {
+                tong = ((50*1.728)+(50*1.786)+(100*2.074)+(100*2.612)+(100*3.015)+(KWH-400)*dong)*10
+                document.getElementById('bill').value = tong;
+            }
+        }
+    </script>
+</body>
+</html>

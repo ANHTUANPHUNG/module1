@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span> A :<input type="number" id="number1" ></span>
+    <span> B :<input type="number" id="number2" > </span>
+    <span> C :<input type="number" id="number3" > </span>
+    <span>X1 :<input type="text"  id="kết quả"  ></span>
+    <span>X2 :<input type="text"  id="kết quả1"  ></span>
+    
+    
+    <input type="button"  onclick="MouseEvent()" id="click" value="click">
+    
+    <script>
+        function MouseEvent(){
+            let number1= +document.getElementById('number1').value;
+            let number2= +document.getElementById('number2').value;
+            let number3= +document.getElementById('number3').value;
+            let delta= number2**2 - 4*number1*number3;
+            let X1;
+            let X2;
+            if ( delta > 0 ){
+                X1 = (- number2 + Math.sqrt(delta))/ 2*number1;
+                X2 = (- number2 - Math.sqrt(delta))/ 2*number1;
+                document.getElementById('kết quả').value=X1 ;
+                document.getElementById('kết quả1').value=X2 ;
+              
+
+            } else if ( delta == 0 ){
+                X1= - number2 / 2*number1;
+                X2= - number2 / 2*number1;
+                document.getElementById('kết quả').value=X1 ;
+                document.getElementById('kết quả1').value=X2 ;
+                
+            } else{ 
+                document.getElementById('kết quả').value='pt vô nghiệm' ;
+                document.getElementById('kết quả1').value='pt vô nghiệm' ;
+        }
+    }
+    </script>
+   
+</body>
+</html>
