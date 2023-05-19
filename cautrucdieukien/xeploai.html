@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="wclassth=device-wclassth, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
-    <table border="0" cellspacing="0" >
+    <table border="1" cellspacing="0" >
         <tbody>
             <tr>
                 <th></th>
@@ -16,18 +16,18 @@
             </tr>
             <tr>
                 <th>Điểm hệ số 1</th>
-                <th><input type="number" class="scores1" value="1"></th>
-                <th><input type="number" class="scores2" value="2"></th>
+                <th><input type="number" id="scores1" ></th>
+                <th><input type="number" id="scores2" ></th>
             </tr>
             <tr>
                 <th> Điểm hệ số 2</th>
-                <th><input type="number" class="scores3" value="3"></th>
-                <th><input type="number" class="scores4" value="4"></th>
+                <th><input type="number" id="scores3" ></th>
+                <th><input type="number" id="scores4" ></th>
             </tr>
             <tr>
                 <th> Điểm hệ số 3</th>
-                <th><input type="number" class="scores5" value="5"></th>
-                <th><input type="number" class="scores6" value="6"></th>
+                <th><input type="number" id="scores5" ></th>
+                <th><input type="number" id="scores6" ></th>
             </tr>
             
             <tr>
@@ -37,8 +37,8 @@
             </tr>
             <tr>
                 <th></th>
-                <th><input type="number" class="scores7" value="7"></th>
-                <th><input type="number" class="scores8"value="8" ></th>
+                <th><input type="number" id="scores7" ></th>
+                <th><input type="number" id="scores8" ></th>
             </tr>
             <tr>
                 <th></th>
@@ -46,24 +46,31 @@
             </tr>
             <tr>
                 <th>Tổng điểm cả năm:</th>
-                <th colspan="2"><input type="number" class="scores9" value="9"></th>
+                <th colspan="2"><input type="number" id="scores9" ></th>
             </tr>
         </tbody>
     </table>
+    <input type="reset" value="reset">
     <script>
         function mouseEvent1(){
-            let scores1 = +document.getElementsByClassName('scores1');
-            let scores2 = +document.getElementsByClassName('scores2');
-            let scores3 = +document.getElementsByClassName('scores3');
+            let scores1 = +document.getElementById('scores1').value;
+            let scores2 = +document.getElementById('scores2').value;
+            let scores3 = +document.getElementById('scores3').value;
             let total1 = (scores1 + scores2*2 +scores3*3)/6
-            document.getElementsByClassName('scores7') = total1;
+            document.getElementById('scores7').value = total1;
         }
         function mouseEvent2(){
-            let scores4 = +document.getElementsByClassName('scores4');
-            let scores5 = +document.getElementsByClassName('scores5');
-            let scores6 = +document.getElementsByClassName('scores6');
-            let total2 = (scores1 + scores2*2 +scores3*3)/6
-            document.getElementsByClassName('scores8') = total2;
+            let scores4 = +document.getElementById('scores4').value;
+            let scores5 = +document.getElementById('scores5').value;
+            let scores6 = +document.getElementById('scores6').value;
+            let total2 = (scores4 + scores5*2 +scores6*3)/6
+            document.getElementById('scores8').value = total2;
+        }
+        function mouseEvent3(){
+            let scores7 = +document.getElementById('scores7').value;
+            let scores8 = +document.getElementById('scores8').value;
+            let total3 = (scores7 + scores8*2)/3
+            document.getElementById('scores9').value = total3;
         }
     </script>
 </body>
