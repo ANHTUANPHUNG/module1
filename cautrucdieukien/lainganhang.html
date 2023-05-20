@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width. initial-scale=1.0">
+    <title>Lãi ngân hàng vietinbank</title>
+</head>
+<body>
+    <table border="0" cellspacing="0">
+        <tbody>
+            <tr>
+                
+                <th>Số tiền vay</th>
+                <th><input type="number" id="num"></th>
+            </tr>
+            <tr>
+                
+                <th>Thời hạn vay</th>
+                <th><input type="number" id="time"></th>
+            </tr>
+            <tr>
+                <th ><button id="rate1" onclick="clickrate()">Lãi suất:</button></th>
+                <th colspan="2"><input type="number" id="rate"></th>
+            </tr>
+            <tr>
+                <th ><button id="total1" onclick="clicktotal()">Số tiền trả hàng tháng:</button></th>
+                <th colspan="2"><input type="number" id="total"></th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function clickrate(){
+            let num = +document.getElementById('num').value;
+            let time = +document.getElementById('time').value;
+            switch(true){
+                case time < 3 :
+                    document.getElementById('rate').value=4.9;
+                    break;
+                case time < 6 :
+                    document.getElementById('rate').value=5.4;
+                    break;
+                case time < 12 :
+                    document.getElementById('rate').value=5.8;
+                    break;
+                case time >=12 :
+                    document.getElementById('rate').value=7.2;
+                    break;        
+            }  
+        }
+        function clicktotal(){
+            let num = parseFloat( document.getElementById('num').value);
+            let time = parseFloat( document.getElementById('time').value);
+            let rate = parseFloat( document.getElementById('rate').value);
+            rate
+            console.log(num);
+            console.log(time);
+            console.log(rate);
+            let total= (num/time) + ((num*rate/100)/time)
+            document.getElementById('total').value = total;
+
+        }
+    </script>
+</body>
+</html>
