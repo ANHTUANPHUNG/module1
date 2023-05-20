@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển độ C sang độ F</title>
+</head>
+<body>
+    <span>Chuyển độ C sang độ F</span><br>
+    <span><input type="number" id="temperature" placeholder="nhập độ C"></span> <br>
+    <button id="convert" onclick="mouseEvent()">Convert</button> <br>
+    <span>Độ F:<input type="number" id="result" placeholder="nơi hiển thị kết quả"></span>
+</body>
+    <script>
+        function mouseEvent(){
+            let temperature = + document.getElementById('temperature').value;
+            let result = (temperature *9/5) +32;
+            document.getElementById('result').value= result ;
+        }
+    </script>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        
+        <tbody>
+            <tr>
+                
+                <th >Doanh số bán được</th>
+            </tr>
+            <tr>
+                
+                <th ><input type="number" id="sale" value="sale" ></th>
+            </tr>
+            <tr>
+                <th ><button id="count" onclick="mouseevent()">Hoa hồng</button></th>
+            </tr>
+            <tr>
+                <th ><input type="number" id="total" value="total"></th>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        function mouseevent(){
+            let sale = +document.getElementById('sale').value;
+            let total =0 ;
+            if (sale <= 2000000) {
+                total = (sale * 3)/100; 
+                document.getElementById('total').value= total;
+            }   
+            else if (sale > 2000.001 && sale <= 5000000 ){
+                total = (2000000*3)/100 + ((sale - 2000000)*5)/100;
+                document.getElementById('total').value= total;
+            } 
+            else if (sale > 5000001 && sale <= 10000000 ){
+                total = (2000000*3)/100 + (3000000*5)/100 +((sale - 5000000)*10)/100;
+                document.getElementById('total').value= total;
+            } 
+            else if (sale > 10000001 && sale <= 30000000 ){
+                total = (2000000*3)/100 + (3000000*5)/100 + (500000*10)/100 +
+                ((sale - 10000000)*15)/100;
+                document.getElementById('total').value= total;
+            } 
+            else {
+                total = (2000000*3)/100 + (3000000*5)/100 + (5000000*10)/100 +
+                (20000000*15)/100 + ((sale - 30000000)*25)/100;
+                document.getElementById('total').value= total;
+            }
+        }
+    </script>
+</body>
+</html>

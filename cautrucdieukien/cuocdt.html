@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Cước điện thoại</h2>
+    <span>Phí thuê bao bắt buộc: 25 nghìn đồng</span> <br>
+    <span><input type="number" id="call" placeholder="nhập số phút gọi"></span> <br>
+    <button id="total" onclick="result()" >total</button> <br>
+    <span><input type="number" id="result" placeholder="giá tiền"></span>
+    <script>
+        function result(){
+            let call = +document.getElementById('call').value;
+            let result = 0 ;
+            switch(true){
+                case call <= 50 :
+                    result = 25000 + (call*600);
+                    document.getElementById('result').value=result;
+                    break;
+                case call <= 150 :
+                    result = 25000 + (50*600) + ((call-50)*400);
+                    document.getElementById('result').value=result;
+                    break;
+                case call <= 200 :
+                    result = 25000 + (50*600) + (100*400) + ((call-150)*300);
+                    document.getElementById('result').value=result;
+                    break;
+                case call > 200 :
+                    result = 25000 + (50*600) + (100*400) + (50*300) + ((call-200)*200);
+                    document.getElementById('result').value=result;
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
