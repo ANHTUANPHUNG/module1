@@ -19,13 +19,12 @@
 
     </div>
     <script>
-        function MouseEvent(){
+        function MouseEvent(action){
             
             let number1 = +document.getElementById('num1').value;
             let number2 = +document.getElementById('num2').value;
-            let tính;
 
-            switch(tính){
+            switch(action){
                 case 'add':
                     document.getElementById('result').innerHTML=(number1 + number2);
                     break;
