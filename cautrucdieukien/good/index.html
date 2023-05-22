@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+
+<body>
+    <div id="cont">
+        <div>
+            <input type="checkbox" name="" id="good" onclick="mouseEvent('goood')"> <span> good </span>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="cheap" onclick="mouseEvent('cheap')"><span> cheap </span>
+        </div>
+        <div>
+            <input type="checkbox" name="" id="fast" onclick="mouseEvent('fast')"> <span> fast </span>
+        </div>
+    </div>
+    <script>
+        function mouseEvent(name) {
+            let good = document.getElementById('good').checked;
+            let cheap = document.getElementById('cheap').checked;
+            let fast = document.getElementById('fast').checked;
+            if (good == true && cheap == true && fast == true) {
+                switch (name) {
+                    case 'goood': document.getElementById('cheap').checked = false;
+                        break;
+                    case 'cheap': document.getElementById('fast').checked = false;
+                        break;
+                    case 'fast': document.getElementById('good').checked = false;
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
