@@ -9,17 +9,17 @@
 <body>
     <h1>Do you love me?</h1>
     <span style="margin-left: 30px;"><button id=" yes" onclick="mouseEvent()">Yes</button></span>
-    <span style="margin-left: 30px;"><button id=" no" onclick="mouseover()">No</button></span>
+    <span style="margin-left: 30px;">
+        <button id="no" style="position: relative;" onmouseover="noHover()">No</button>
+    </span>
 </body>
     <script>
         function mouseEvent(){
-         
-                alert ('<3')
-            
+            alert ('<3') 
         }
-        function mouseover(){
-            var x =math.round( math.random()* window.innerWidth);
-            var y =math.round( math.random()* window.innerHeight);
+        function noHover(){
+            var x = Math.random()* window.innerWidth;
+            var y = Math.random()* window.innerHeigh;
             document.getElementById('no').style.left= x+'px';
             document.getElementById('no').style.top= y+'px';
 
