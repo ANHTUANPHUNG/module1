@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style="margin-left: 250px ;" onclick="mouseover()" id="selective">
+        <img style="margin-bottom: 15px;" id="img1" src="anh1/img-1.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+        <img style="margin-bottom: 15px;" id="img2" src="anh1/img1-2.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+        <img style="margin-bottom: 15px;" id="img3" src="anh1/img2-3.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+        <img style="margin-bottom: 15px;" id="img4" src="anh1/img1-4.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+        <img style="margin-bottom: 15px;" id="img5" src="anh1/img-5.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+        <img style="margin-bottom: 15px;" id="img6" src="anh1/img2-6.png" width="50%" alt=""
+            onclick="mouseover1(this.id)">
+    </div>
+</body>
+<script>
+    function mouseover1(id) {
+        let img = document.getElementById(id);
+        let imgSrc1 = ["anh1/img-1.png", "anh1/img1-1.png", "anh1/img2-1.png"];
+        let imgSrc2 = ["anh1/img-2.png", "anh1/img1-2.png", "anh1/img2-2.png"];
+        let imgSrc3 = ["anh1/img-3.png", "anh1/img1-3.png", "anh1/img2-3.png"];
+        let imgSrc4 = ["anh1/img-4.png", "anh1/img1-4.png", "anh1/img2-4.png"];
+        let imgSrc5 = ["anh1/img-5.png", "anh1/img1-5.png", "anh1/img2-5.png"];
+        let imgSrc6 = ["anh1/img-6.png", "anh1/img1-6.png", "anh1/img2-6.png"];
+
+        // "anh1/img1-1.png" + "anh1/img-2.png" + "anh1/img-3.png" == "anh1/img-1.pnganh1/img-2.pnganh1/img-3.png" || 
+        // "anh2/img-1.png" + "anh2/img-2.png" + "anh2/img-3.png" == "anh2/img-1.pnganh2/img-2.pnganh2/img-3.png"
+        if (id == "img1") {
+            console.log(Math.floor(Math.random() * imgSrc1.length));
+            img.src = imgSrc1[Math.floor(Math.random() * imgSrc1.length)]
+
+        }
+        if (id == "img2") {
+            console.log(Math.floor(Math.random() * imgSrc2.length));
+            img.src = imgSrc2[Math.floor(Math.random() * imgSrc2.length)]
+        }
+        if (id == "img3") {
+            console.log(Math.floor(Math.random() * imgSrc3.length));
+            img.src = imgSrc3[Math.floor(Math.random() * imgSrc3.length)]
+        }
+        if (id == "img4") {
+            console.log(Math.floor(Math.random() * imgSrc4.length));
+            img.src = imgSrc4[Math.floor(Math.random() * imgSrc4.length)]
+        }
+        if (id == "img5") {
+            console.log(Math.floor(Math.random() * imgSrc5.length));
+            img.src = imgSrc5[Math.floor(Math.random() * imgSrc5.length)]
+        }
+        if (id == "img6") {
+            console.log(Math.floor(Math.random() * imgSrc6.length));
+            img.src = imgSrc6[Math.floor(Math.random() * imgSrc6.length)]
+        }
+
+        // if ('anh1/img-1.png && anh1/img-2.png && anh1/img-3.png && anh1/img-4.png && anh1/img-5.png && anh1/img-6.png ') {
+        //     img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        // } else if ('anh1/img1-1.png && anh1/img1-2.png && anh1/img1-3.png && anh1/img1-4.png && anh1/img1-5.png && anh1/img1-6.png ') {
+        //     img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        // } else if ('anh1/img2-1.png && anh1/img2-2.png && anh1/img2-3.png && anh1/img2-4.png && anh1/img2-5.png && anh1/img2-6.png ') {
+        //     img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        // } else {
+        //     img.style = "margin-bottom:15px; bot-shadow: blue 4px 4px 9px;"
+        // }
+        // switch (true) {
+        //     case 'anh1/img-1.png' && 'anh1/img-2.png' && 'anh1/img-3.png' && 'anh1/img-4.png' && 'anh1/img-5.png' && 'anh1/img-6.png ': {
+        //         img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        //     }
+        //     case 'anh1/img1-1.png' && 'anh1/img1-2.png' && 'anh1/img1-3.png ' && 'anh1/img1-4.png' && 'anh1/img1-5.png' && 'anh1/img1-6.png ': {
+        //         img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        //     }
+        //     case 'anh1/img2-1.png' && 'anh1/img2-2.png' && 'anh1/img2-3.png' && 'anh1/img2-4.png' && 'anh1/img2-5.png' && 'anh1/img2-6.png ': {
+        //         img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        //     }
+        //     default: {
+        //         img.style = "margin-bottom:15px; bot-shadow: blue 4px 4px 9px;"
+        //     }
+        // }
+        // if ("anh1/img-1.png" + "anh1/img-2.png" + "anh1/img-3.png" + "anh1/img-4.png" + "anh1/img-5.png" + "anh1/img-6.png" == "anh1/img-1.pnganh1/img-2.pnganh1/img-3.pnganh1/img-4.pnganh1/img-5.pnganh1/img-6.png") {
+        //     img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+        // } else {
+        //     img.style = "margin-bottom: 15px; box-shadow: black 4px 4px 9px;"
+        // }
+        function mouseover() {
+            let img = document.getElementById(id);
+            let imgsrc1 = ["anh1/img-1.pnganh1/img-2.pnganh1/img-3.pnganh1/img-4.pnganh1/img-5.pnganh1/img-6.png"];
+            let imgsrc2 = ["anh1/img1-1.png", "anh1/img1-2.png", "anh1/img1-3.png", "anh1/img1-4.png", "anh1/img1-5.png", "anh1/img1-6.png"];
+            let imgsrc3 = ["anh1/img2-1.png", "anh1/img2-2.png", "anh1/img2-3.png", "anh1/img2-4.png", "anh1/img2-5.png", "anh1/img2-6.png"];
+            if ("anh1/img-1.png" + "anh1/img-2.png" + "anh1/img-3.png" + "anh1/img-4.png" + "anh1/img-5.png" + "anh1/img-6.png" == imgsrc1) {
+                img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+            } else {
+                img.style = "margin-bottom: 15px; box-shadow: black 4px 4px 9px;"
+            }
+            if (imgsrc2 == true) {
+                img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+            } else {
+                img.style = "margin-bottom: 15px; box-shadow: black 4px 4px 9px;"
+            }
+            if (imgsrc3 == true) {
+                img.style = "margin-bottom: 15px; box-shadow: red 4px 4px 9px;"
+            } else {
+                img.style = "margin-bottom: 15px; box-shadow: black 4px 4px 9px;"
+            }
+
+        }
+    }
+</script>
+
+</html>
