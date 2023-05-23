@@ -10,13 +10,24 @@
 
 <body>
     <script>
-        let i = Number(prompt('nhập 1 số:'));
+        let num = Number(prompt("Enter your number: "));
         let total = 0;
-        for (; i > 0, i < 100;) {
+        let i = 1;
+        // for (; i <= num; i++) {
+        //     total = total + i;
+        //     console.log(total);
+        // }
+        // while (i <= num) {
+        //     total = total + i;
+        //     i++;
+        //     document.write(total + '<br>');
+        // }
+        do {
             total = total + i;
-            document.write(total);
-            console.log(total);
+            i++;
+            document.write(total + '<br>');
         }
+        while (i < num);
     </script>
 </body>
 
