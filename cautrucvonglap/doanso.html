@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="mouseEvent()">Đoán số</button>
+    <script>
+        function mouseEvent() {
+            let num = +prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu? ')
+            let number = Math.floor(Math.random() * num);
+            console.log(number);
+            let value = +prompt('nhập giá trị đúng');
+            let turn = 0;
+            if (value == number) {
+                document.write('Bạn đã đoán đúng số. Chúc mừng bạn!');
+            } else {
+                for (; value != number;) {
+                    turn++;
+                    if (turn == 4) {
+                        alert('hết lượt đoán');
+                        break;
+                    } else if (value < number) {
+                        alert('số bạn đoán lớn hơn');
+                    } else {
+                        alert('số bạn đoán bé hơn');
+                    }
+                    value = +prompt('nhập giá trị đúng');
+
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

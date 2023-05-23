@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a = 0;
+        let b = 1;
+        let total = 0;
+        let i = 1
+        document.write(b + '<br>');
+        // for (; i <= 100; i++) {
+        //     total = a + b;
+        //     a = b;
+        //     b = total;
+        //     document.write(total + '<br>');
+        // }
+        // while (i <= 100) {
+        //     total = a + b;
+        //     a = b;
+        //     b = total;
+        //     document.write(total + '<br>');
+        //     i++;
+        // }
+        do {
+            total = a + b;
+            a = b;
+            b = total;
+            document.write(total + '<br>');
+            i++;
+        } while (i <= 1000);
+
+    </script>
+</body>
+
+</html>

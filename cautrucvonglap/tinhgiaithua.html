@@ -10,10 +10,13 @@
 
 <body>
     <script>
-        let fibonacci = +prompt(' nhập vào số cân lấy');
-        let a = 0;
-        let b = 1;
-        let total = 0;
+        let i = Number(prompt('nhập số cần tính giai thừa'));
+        let a = 1;
+        let multi = 1;
+        for (; a <= i; a++) {
+            multi = multi * a
+        } console.log(multi);
+
     </script>
 </body>
 

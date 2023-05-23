@@ -10,8 +10,8 @@
 
 <body>
     <script>
-        let number = "";
-        for (i = 1; i < 100; i++) {
+
+        for (let i = 1; i <= 100; i++) {
             switch (true) {
                 case i % 3 == 0 && i % 5 == 0: {
                     document.write('FizzBuzz' + '<br>');
@@ -28,13 +28,7 @@
                     document.write(i + '<br>');
                 }
             }
-            number += "Số " + i + '<br>';
-            // if (number % 3 == 0 && number % 5 == 0) {
-            //     document.write('FizzBuzz');
-            // } else if (number %3 ==0 )
-
-        } document.write(number);
-
+        }
     </script>
 </body>
 
