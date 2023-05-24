@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let money = Number(prompt('Nhập số tiền gửi ngân hàng lãi suất 5%/năm'));
+        let month = Number(prompt('Nhập số tháng gửi'));
+        let rate = 0;
+        let total = 0;
+        let rate1 = 0;
+        document.write(`Số tiền bạn gửi là ${money}VNĐ trong ${month} tháng với lãi suất 5%/ năm<br>`)
+        for (let i = 1; i <= month; i++) {
+            rate = ((money * 5 / 100) / month)
+            money += rate;
+            rate1 = Math.floor(rate);
+            document.write(`sô tiền lời tháng ${i} là ${rate1}<br>`)
+            total = total + rate1;
+        }
+        document.write(`Tổng tiền lãi nhận được sau ${month} là : ${total}`)
+
+    </script>
+</body>
+
+</html>

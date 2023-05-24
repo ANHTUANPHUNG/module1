@@ -10,23 +10,59 @@
 
 <body>
     <script>
-        let countnst = 0;
         let num = Number(prompt('nhập số lượng số nguyên tố cần in ra :'));
+        let N = 2;
         let count = 0;
-        for (let N = 2; N < num; N++) {
-            if (countnst < num) {
-                for (let M = 1; M <= N; M++) {
-                    if (N % M == 0) {
-                        count += 1;
-                    }
-                    if (M % 2 == 0) {
-                        document.write(N + '<br/>');
-                    }
+        let isPrime = true;
+        // 2 -> vc
+        // i = [2 , vc]
+        // i có phải là SNT ko?
+        //   -> yes -> hiển thị ra
+        //          -> tăng biên đếm
+        //   -> no -> ko hiển thị
+        // tăng i
+        // chua đủ số lượng (đếm chưa đủ)
+
+        for (N = 2; ; N++) {
+            isPrime = true;
+            for (let i = 2; i < N; i++) {
+                if (N % i == 0) {
+                    isPrime = false;
+                    break;
                 }
-            } else {
+            }
+            if (isPrime == true) {
+                document.write(`${N}<br>`)
+                count++;
+            }
+
+            if (count == num) {
                 break;
             }
         }
+
+
+        // for (let i = 0; ; i++) {
+        //     switch (true) {
+
+        //         // case i < 4: {
+        //         //     document.write(i + '<br>');
+        //         //     break;
+        //         // }
+        //         case i >= 4: {
+        //             while (i % N != 0, N <= Math.sqrt(i)) {
+        //                 document.write(i + '<br>')
+        //                 N++;
+        //                 count++;
+        //                 if (count == number) {
+        //                     break;
+        //                 };
+        //             }
+
+        //         }
+        //     }
+        // }
+
     </script>
 </body>
 
