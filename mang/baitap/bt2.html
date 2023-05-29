@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 phan tu khac nhau</title>
+</head>
+
+<body>
+    <script>
+        function integer(size) {
+            let numbers = [];
+            for (let i = 0; i < size; i++) {
+                let sNumber;
+                do {
+                    sNumber = Math.floor(Math.random() * 500 + 10); //8
+                } while (numbers.includes(sNumber))     // false
+                numbers.push(sNumber);
+            }
+            return numbers;
+        }
+        function max(numbers) {
+            let index = 0;
+            let max1 = numbers[0];
+            for (let i = 1; i < numbers.length; i++) {
+                if (numbers[i] > max1) {
+                    max1 = numbers[i]
+                    index = i;
+                }
+            } return { max1, index };
+        }
+        let numbers = integer(10);
+        let { max1, index } = max(numbers);
+        console.log(numbers);
+        console.log(max1);
+        console.log(index);
+
+
+    </script>
+</body>
+
+</html>

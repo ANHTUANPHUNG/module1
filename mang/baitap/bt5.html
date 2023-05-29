@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let integer = [-324, -234, 23, 234, 324, 235, 2, 214, 235, 346, 3, 42, -43, 3, -53, -435, -35, 3534, 23]
+        function numbers() {
+            let count = 0;
+            for (let number of integer) {
+                if (number < 0) {
+                    count += 1;
+                }
+            } return count;
+        }
+        console.log(integer);
+        console.log(numbers());
+
+    </script>
+</body>
+
+</html>

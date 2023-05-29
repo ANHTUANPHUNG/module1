@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function integer(size) {
+            let integers = [];
+            for (let i = 0; i < size; i++) {
+                integers[i] = Math.floor(Math.random() * 50 + 10);
+            }
+            return integers;
+        }
+        let inte = integer(10);
+        inte.sort(function (a, b) {
+            return -a + b;
+        })
+
+        console.log(inte);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>số nguyên lớn hơn 10
+    </title>
+</head>
+
+<body>
+    <script>
+        function integer1(size) {
+            let num = [];
+            for (let i = 0; i < size; i++) {
+                num[i] = Math.floor(Math.random() * 500 + 10);
+            } return num;
+        }
+
+        function getEven() {
+            let count = 0;
+            for (let number of num) {
+                if (number >= 250) {
+                    count += 1;
+                }
+            }
+            return count;
+        }
+        let numbers = integer1(10);
+        let count = getEven(numbers);
+        console.log(numbers);
+        console.log(count);
+    </script>
+</body>
+
+</html>

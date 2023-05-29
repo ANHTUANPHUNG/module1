@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function array(size) {
+            let number = [];
+            for (let i = 0; i < size; i++) {
+                number[i] = Math.floor(Math.random() * 49 + 10)
+            }
+            return number;
+        }
+        let arr = array(10);
+        let array1 = arr.filter(function (value, index) {
+            return arr.indexOf(value) === index;
+        });
+
+        console.log(arr);
+        console.log(array1);
+        let num = +prompt('nhập sô V');
+        if (arr.includes(num)) {
+            arr.splice(arr.includes(num), 1);
+            arr.push(0);
+            console.log('đã xóa phần tử khỏi mảng :' + arr);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let array = [5, 6, 7, 24, 7, 75, 345, 35, 47, 53, 36, 34, 352, 35, 532, 634, 634];
+
+        // array.sort(function (a, b) {
+        //     return -a + b;
+
+        // })
+        // function numbers(number) {
+        //     for (let i = 0; i < number.length; i++) {
+        //         for (let j = 0; j < i; j++) {
+        //             if (number[i] == number[j]) {
+        //                 number.splice(j, 1);
+        //             }
+        //         }
+        //     }
+        //     return number;
+        // }
+
+        // let arrays = numbers(array);
+        // console.log(arrays);
+        // array.reverse();
+        // console.log(array);
+        let array1 = array.filter(function (item, index) {
+            return array.indexOf(item) === index;
+        });
+        console.log(array1);
+
+
+    </script>
+</body>
+
+</html>
