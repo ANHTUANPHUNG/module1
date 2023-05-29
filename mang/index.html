@@ -22,36 +22,34 @@
         //         console.log('[' + a + ']' + '[' + b + ']=', thanhpho[a][b]);
         //     }
         // }
-        // let thanhpho1 = [
-        //     ['hue', 1, 'thanhphohue'],
-        //     ['dannang', 2, 'thanhphodanang'],
-        //     ['quangtri', 3, 'dongha']
-        // ];
-        thanhpho1.forEach(function (i) {
-            for (let j = 0; j < i.length; j++) {
-                console.log(i[j]);
-                document.write(thanhpho1(i[j]));
-            }
-        });
-        // for (let m = 0; m < thanhpho1.length; m++) {
-        //     for (let n = 0; n < thanhpho1[m].length; n++) {
-        //         document.write(thanhpho1[m][n] + '<br>');
+        let thanhpho1 = [
+            ['hue', 1, 'thanhphohue'],
+            ['dannang', 2, 'thanhphodanang'],
+            ['quangtri', 3, 'dongha']
+        ];
+        // thanhpho1.forEach(function (i) {
+        //     for (let j = 0; j < i.length; j++) {
+        //         console.log(i[j]);
+        //         document.write(thanhpho1[j] + '</br>');
         //     }
-        // }
-        // let m = 0
-        // while (m < thanhpho1.length) {
-        //     let n = 0
-        //     while (n < thanhpho1[m].length) {
-        //         document.write("[" + m + "]" + "[" + n + "]=", thanhpho1[m][n] + "<br>")
-        //         n++
-        //     } m++
-        // }
+        // });
+        for (let m = 0; m < thanhpho1.length; m++) {
+            for (let n = 0; n < thanhpho1[m].length; n++) {
+                document.write(thanhpho1[m][n] + '<br>');
+            }
+        }
+        let m = 0
+        while (m < thanhpho1.length) {
+            let n = 0
+            while (n < thanhpho1[m].length) {
+                document.write("[" + m + "]" + "[" + n + "]=", thanhpho1[m][n] + "<br>")
+                n++
+            } m++
+        }
         // let a = ["z", "b", "e", "u", "i", "o", "p", "d"];
         // let
         // b = a.sort();
         // console.log(b);
-        confirm("Do you like freetuts.net");
-
     </script>
 </body>
 
