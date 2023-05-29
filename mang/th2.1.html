@@ -22,9 +22,22 @@
         //         mang1.push(numbers[i])
         //     };
         // } document.write(mang1.join(" "));
-        let str = "The Quick Brown Fox";
-        let array1 = str.split(' ');
-        console.log(array1);
+
+        let str = 'The Quick Brown Fox';
+        var Upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var Lower = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+        for (var i = 0; i < str.length; i++) {
+            if (Upper.indexOf(str[i]) !== -1) {
+                result.push(str[i].toLowerCase());
+            } else if (Lower.indexOf(str[i]) !== -1) {
+                result.push(str[i].toUpperCase());
+                // } else {
+                //     result.push(str[i]);
+            }
+        }
+        console.log(result.join(''));
+
     </script>
 </body>
 
