@@ -10,16 +10,18 @@
 
 <body>
     <script>
+        // random dãy số mà không cho số nào bị lặp lại
         function integer(size, min, max) {
             let numbers = [];
             for (let i = 0; i < size; i++) {
-                let num;
+                let num = 0;
                 do {
                     num = Math.floor(Math.random() * (max - min + 1) + min);
                 } while (numbers.includes(num))
                 numbers.push(num);
             } return numbers;
         }
+        // tìm số lớn nhất trong dãy
         function max(numbers) {
             let max1 = numbers[0];
             for (let i = 1; i < numbers.length; i++) {
@@ -28,6 +30,7 @@
                 }
             } return max1;
         }
+        // tính tổng của dãy số
         function total(numbers) {
             let total1 = 0;
             for (let i = 0; i < numbers.length; i++) {

@@ -10,20 +10,6 @@
 
 <body>
     <script>
-
-        // function createarray() {
-        //     let createarray1 = new Array(10);
-        //     for (i = 0; i < createarray1.length; i++) {
-        //         createarray1[i] = Math.ceil(Math.random() * 10 + 10);
-        //     } console.log(createarray1);
-        // } createarray()
-        // function createarray(size, min, max) {
-        //     let createarray1 = [];
-        //     for (i = 0; i < size; i++) {
-        //         createarray1[i] = Math.floor(Math.random() * (max - min + 1) + min);
-        //     } return createarray1;
-        // } console.log(createarray(10, 5, 15)); 
-        // createarray(15, 10, 20);
         //         Viết chương trình tạo ra 1 mảng (matrix) 2 chiều với (size1, size2) và giá trị này được người dùng nhập vào.
         // Giá trị của mảng matrix được sinh ngẩu nhiên trong khoảng [10, 50]
         // Hiển thị mảng matrix này ra màn hình
@@ -44,9 +30,9 @@
             for (let i = 0; i < sum.length; i++) {
                 for (let j = 0; j < sum[i].length; j++) {
                     total += sum[i][j];
-                    break;
+                    // break;
                 }
-                // break;
+                break;
             }
             return total;
         }

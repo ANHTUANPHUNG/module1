@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        // function star1() {
+        //     let star = prompt('nhập ngôi sao');
+        //     for (let i = 0; i < arr1.length; i++) {
+        //         if (arr1[i] == star) {
+        //             return arr2[i];
+        //         }
+        //     } return 'không là ngôi sao';
+        // }
+        // document.write(star1());
+        let star = prompt('nhập ngôi sao');
+        console.log(arr1.indexOf(star));
+        if (arr1.indexOf(star) == -1) {
+            alert("Không có ngôi sao")
+        } else {
+            document.write(arr2[arr1.indexOf(star)])
+        }
+    </script>
+</body>
+
+</html>

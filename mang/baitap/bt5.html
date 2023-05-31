@@ -11,16 +11,22 @@
 <body>
     <script>
         let integer = [-324, -234, 23, 234, 324, 235, 2, 214, 235, 346, 3, 42, -43, 3, -53, -435, -35, 3534, 23]
+        //  tìm giá trị <0 
+        // tạo 1 biến count = 0 để tìm giá trị <0
         function numbers() {
             let count = 0;
+            let num = [];
             for (let number of integer) {
                 if (number < 0) {
                     count += 1;
+                    num.push(number)
                 }
-            } return count;
+            } return [count, num];
         }
+        let num = numbers();
         console.log(integer);
-        console.log(numbers());
+        console.log(num);
+
 
     </script>
 </body>

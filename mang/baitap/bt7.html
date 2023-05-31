@@ -10,6 +10,7 @@
 
 <body>
     <script>
+        // tìm chuỗi giá trị random
         function array(size) {
             let number = [];
             for (let i = 0; i < size; i++) {
@@ -18,12 +19,15 @@
             return number;
         }
         let arr = array(10);
+        // dùng filter và gán 2 giá trị value và index
+        // sau đó sử dung index of để so sánh 2 giá trị (value ) và index
         let array1 = arr.filter(function (value, index) {
-            return arr.indexOf(value) === index;
+            return arr.indexOf(value) == index;
         });
 
         console.log(arr);
         console.log(array1);
+        // 
         let num = +prompt('nhập sô V');
         if (arr.includes(num)) {
             arr.splice(arr.includes(num), 1);

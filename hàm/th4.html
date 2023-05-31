@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // nhập kiểm tra xem có phải số nguyên tố hay không
+        // let num = +(prompt('Nhập một số'));
+        // function isPrime(number) {
+        //     for (let i = 2; i <= Math.sqrt(number); i++) {
+        //         if (number % i == 0) {
+        //             return false;
+        //         }
+        //     }
+        //     return true;
+        // }
+
+        // if (isPrime(num)) {
+        //     alert(`${num} là số nguyên tố`);
+        // } else {
+        //     alert(`${num} không là số nguyên tố`);
+        // }
+        // nhập kiểm tra những số nguyên tố đầu tiên trong dãy
+        let num1 = +(prompt('dãy số nguyên tố cần tìm '));
+        let count = 0;
+        function prime(number) {
+            for (let i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            } return true;
+        }
+        for (let N = 2; ; N++) {
+            if (prime(N)) {
+                console.log(N);
+                count++;
+            }
+            if (count == num1) {
+                break;
+            }
+        } console.log(count);
+
+
+    </script>
+</body>
+
+</html>
