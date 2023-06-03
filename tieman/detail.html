@@ -19,7 +19,7 @@
     console.log(id);
     let html = ``
     let detailElement = document.getElementById('detail')
-    listProduct.map((product) => {
+    listData.map((product) => {
         if (product.id == id) {
             return html += `
             <div class="item">
@@ -35,7 +35,7 @@
                             <img src="fileanh/star.png" alt="">
                         </span>
                         <span>
-                            <img src="fileanh/star.png" alt="">ss
+                            <img src="fileanh/star.png" alt="">
                         </span>
                         <span>
                             <img src="fileanh/star.png" alt="">
@@ -43,7 +43,7 @@
                     </div>
                     <div class="name"><a href='detail.html?id=${product.id}'>${product.name}</a></div>
                     <div class="desc">${product.description}</div>
-                    <div class="price" id="priceDetail">${product.price} VNĐ</div>
+                    <div id="priceDetail">${product.price} VNĐ</div>
                     <input type="number" value="1" id="quantityDetail"/>
                     <select>
                         ${product.sizes.map((size) => {

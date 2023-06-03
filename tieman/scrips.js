@@ -27,4 +27,3 @@ prev.addEventListener('click', function (event) {
     count++
 })
 
-console.log("Trang scrip", listProduct);

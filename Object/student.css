@@ -1,40 +1,43 @@
-*{
+* {
     padding: 0;
     margin: 0;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.container{
+.container {
     width: 900px;
     margin: 0px auto;
 }
 
-.table{
+.table {
     width: 100%;
 }
 
-.table, .table tr, .table td, .table th{
+.table,
+.table tr,
+.table td,
+.table th {
     border-collapse: collapse;
 }
 
-.thead th{
+.thead th {
     padding: 15px;
     background-color: orange;
     color: white;
 }
 
-.table-snippet>tbody>tr:nth-child(odd){
+.table-snippet>tbody>tr:nth-child(odd) {
     background-color: rgb(226, 214, 214);
 }
 
-.table-snippet>tbody>tr:hover{
+.table-snippet>tbody>tr:hover {
     background-color: rgb(148, 131, 131);
     cursor: pointer;
     color: white;
     /* transform: scale(1.01); */
 }
 
-.avatar{
+.avatar {
     width: 60px;
     border-radius: 50%;
 }
